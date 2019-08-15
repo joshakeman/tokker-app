@@ -70,6 +70,7 @@ export class login extends Component {
                 this.props.history.push('/')
             })
             .catch(err => {
+                console.log(err.response.data)
                 this.setState({
                     errors: err.response.data,
                     loading: false
