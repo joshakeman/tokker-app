@@ -2,13 +2,19 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
 
+import Tok from '../components/Tok'
+
 export class home extends Component {
     state= {
         toks: null
     }
 
     componentDidMount(){
-        axios.get('/toks')
+
+    /* !!!!!!!!!!!!!!!!! WARNING !!!!!!!!!!!!!!!!! */
+    /* Every reload is another DB call to Firebase! */
+        const baseUrl = 'https://us-central1-tokker.cloudfunctions.net/api'
+        axios.get('https://us-central1-tokker.cloudfunctions.net/api/toks')
             .then(res => {
                 console.log(res.data)
                 this.setState({
@@ -22,7 +28,7 @@ export class home extends Component {
         const { toks } = this.state
 
         let recentToksMarkup = toks  ? (
-        toks.map(tok => <p>{tok.body}</p>)
+        toks.map(tok => <Tok tok={tok} />)
         ) : <p>Loading...</p>
 
         return (

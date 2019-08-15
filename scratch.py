@@ -27,15 +27,6 @@ def time_planner(first_array, second_array, duration):
         if first_array[i][1] - maximum >= duration and second_array[i][1] - maximum >= duration:
             return [maximum, maximum + duration]
         i += 1
-
-    # for i in first_array:
-    #     print(i[0], i[1])
-    #     if second_array[i]:
-    #         print ('exists')
-    #     # for j in second_array:
-    #     #     maximum = max(i[0], j[0])
-    #     #     if i[1] - max > duration and j[1] - max > duration:
-    #     #         return [maximum, maximum + duration]
     
     return []
 
