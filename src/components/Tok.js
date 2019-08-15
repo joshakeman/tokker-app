@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 import { Link } from 'react-router-dom'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 
 // MUI stuff
 import Card from '@material-ui/core/Card';
@@ -26,9 +28,20 @@ const styles = {
 
 export class Tok extends Component {
     render() {
-        const { classes, tok : { body, createdAt, userImage, userHandle, tokId, likeCount, commentCount } } = this.props
 
-        const timestamp = Date(createdAt)
+        dayjs.extend(relativeTime)
+
+        const { 
+            classes, 
+            tok : { 
+                body, 
+                createdAt, 
+                userImage, 
+                userHandle, 
+                tokId, 
+                likeCount, 
+                commentCount } 
+            } = this.props
 
         return (
             <Card className={classes.card}>
@@ -46,7 +59,7 @@ export class Tok extends Component {
                         {userHandle}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
-                        {timestamp}
+                        {dayjs(createdAt).fromNow()}
                     </Typography>
                     <Typography variant="body1">
                         {body}

@@ -32,7 +32,7 @@ export class home extends Component {
                     "createdAt": "2019-08-11T19:13:07.990Z",
                     "commentCount": 0,
                     "likeCount": 0,
-                    "userImage": "https://firebasestorage.googleapis.com/v0/b/tokker.appspot.com/o/no-img.png?alt=media"
+                    "userImage": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4057996.jpg"
                 },
                 {
                     "tokId": "MgyFLw0U5otU1F83ZOCy",
@@ -41,7 +41,7 @@ export class home extends Component {
                     "createdAt": "2019-08-11T19:13:07.990Z",
                     "commentCount": 0,
                     "likeCount": 0,
-                    "userImage": "https://firebasestorage.googleapis.com/v0/b/tokker.appspot.com/o/no-img.png?alt=media"
+                    "userImage": "https://st2.depositphotos.com/3662505/6313/i/950/depositphotos_63136927-stock-photo-man-with-gun.jpg"
                 },
             ] 
         })
